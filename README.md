@@ -1,8 +1,8 @@
 # How to create the React project using vite
-    - yarn create vite real_estate
-    - cd real_estate
-    - yarn
-    - yarn run dev
+1.yarn create vite real_estate
+2.cd real_estate
+3.yarn
+4.yarn run dev
 
 #How to install tailwindcss
 1.Install Tailwind CSS using npm or yarn
@@ -47,3 +47,14 @@ yarn run dev
 </html>
 
 ```
+
+#Add the Router using react-router-dom
+- Install the react-router-dom
+  npm -i react-router-dom
+
+
+# create the server in the backend
+- create the api folder
+- initlize the npm using below command:
+  npm init -y
+- update the package.json file to update/track node server contineoue
