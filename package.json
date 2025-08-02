@@ -1,0 +1,25 @@
+{
+  "name": "real_estate_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+     "dev":"nodemon api/server.js",
+     "start":"node api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhosalerahul9292/Real-Estate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bhosalerahul9292/Real-Estate/issues"
+  },
+  "homepage": "https://github.com/bhosalerahul9292/Real-Estate#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
