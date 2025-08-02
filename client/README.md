@@ -1,12 +1,49 @@
-# React + Vite
+# How to create the React project using vite
+    - yarn create vite real_estate
+    - cd real_estate
+    - yarn
+    - yarn run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#How to install tailwindcss
+1.Install Tailwind CSS using npm or yarn
+npm install tailwindcss @tailwindcss/vite
 
-Currently, two official plugins are available:
+2.Configure the Vite plugin : dd the @tailwindcss/vite plugin to your Vite configuration.
+```
+vite.config.ts
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+3.Import Tailwind CSS : Add an @import to your CSS file that imports Tailwind CSS.
 
-## Expanding the ESLint configuration
+```
+@import "tailwindcss";
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+4.Start your build process using below command:
+
+yarn run dev
+
+5.Start using Tailwind in your HTML in our case link index.css in index.html
+```
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+
+```
