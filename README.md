@@ -65,3 +65,42 @@ yarn run dev
   - login to mongoDB web.
   - create project give name to the project.
 - Create the .env file and add in the variable.
+
+#Create the UserSchema in mongoDB:
+- Create the model folder inside the file named as user_model.js.
+
+```
+const mongoose = require("mongoose");
+
+const userSchema = mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
+
+```
+
+#Create the API routes.
+- Create the controller folder for keep the user api function and call in the api.(user.contoller.js)
+- call the user function api inside the routes by calling the api function.
+- 
