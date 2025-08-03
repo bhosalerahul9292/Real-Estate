@@ -58,3 +58,10 @@ yarn run dev
 - initlize the npm using below command:
   npm init -y
 - update the package.json file to update/track node server contineoue
+
+#connect to the database (mongodb)
+- Install the mongoose package
+- To connect with mongoDB.
+  - login to mongoDB web.
+  - create project give name to the project.
+- Create the .env file and add in the variable.
