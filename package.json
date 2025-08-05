@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-     "dev":"nodemon api/server.js",
-     "start":"node api/server.js"
+    "dev": "nodemon api/server.js",
+    "start": "node api/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/bhosalerahul9292/Real-Estate#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0"
   }
 }
