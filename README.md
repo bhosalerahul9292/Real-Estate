@@ -107,4 +107,6 @@ export default User;
 
 #Create the middleware and a function to handle possible errors.
 - In server.js file I have added the middleware to handle the possible error.
-- and call that where we want to use it.
+- and call that where we want to use it using next().
+
+#Complete signup page UI
