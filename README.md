@@ -103,4 +103,8 @@ export default User;
 #Create the API routes.
 - Create the controller folder for keep the user api function and call in the api.(user.contoller.js)
 - call the user function api inside the routes by calling the api function.
-- 
+
+
+#Create the middleware and a function to handle possible errors.
+- In server.js file I have added the middleware to handle the possible error.
+- and call that where we want to use it.

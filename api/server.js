@@ -32,3 +32,14 @@ app.listen(3000,()=>{
 })
 
 
+// middleware:
+app.use((err,req,response,next)=>{
+    const statusCode=err.statusCode||500
+    const message = err.message || "internal server error"
+
+    return response.status(statusCode).json({
+        success:false,
+        statusCode,
+        message,
+    })
+})
