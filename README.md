@@ -57,7 +57,7 @@ yarn run dev
 - create the api folder
 - initlize the npm using below command:
   npm init -y
-- update the package.json file to update/track node server contineoue
+- update the package.json file to update/track node server continoue
 
 #connect to the database (mongodb)
 - Install the mongoose package
@@ -110,3 +110,17 @@ export default User;
 - and call that where we want to use it using next().
 
 #Complete signup page UI
+
+#Backend and frontend connection:
+1.Connect the frontend using fetch api.
+2.configure the backend api inside the vite.config.js.
+server:{
+    proxy:{
+      '/api':{
+        target:'http://localhost:3000',
+        secure:false,
+      },
+    },
+  },
+  plugins: []
+
