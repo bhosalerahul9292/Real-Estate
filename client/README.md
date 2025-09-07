@@ -48,4 +48,14 @@ export default defineConfig({
 </html>
 
 ```
+# Create the Routes using react-router-dom:
+- To create the routing install the react-router-dom package using  below commmand:
+npm install react-router-dom
+or 
+yarn add react-router-dom
 
+
+To use the icon in component install below package.
+npm install react-icons
+or 
+yarn add react-icons

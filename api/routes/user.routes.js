@@ -1,6 +1,10 @@
+// Use when type is commonjs
+// const express = require('express')
+// const { test,test1} = require('../controllers/user.controlller')
+
 // import the express
-const express = require('express')
-const { test,test1} = require('../controllers/user.controlller')
+import express  from 'express';
+import test from '../controllers/user.controlller.js';
 
 // create router 
 const router = express.Router()
@@ -8,4 +12,7 @@ const router = express.Router()
 // Create the api routes.
 router.get('/test',test)
 
-module.exports = router
+// Use when type is commonjs
+// module.exports = router
+
+export default router;

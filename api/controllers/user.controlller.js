@@ -5,4 +5,8 @@ const test = (req, resp) => {
   });
 };
 
-module.exports = {test}
+// module.exports = {test}
+
+export default test;
+
+// notation app 

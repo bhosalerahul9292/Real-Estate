@@ -1,6 +1,7 @@
 {
   "name": "real_estate_project",
   "version": "1.0.0",
+  "type":"module",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -14,7 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/bhosalerahul9292/Real-Estate/issues"
   },

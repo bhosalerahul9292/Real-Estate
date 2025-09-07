@@ -54,4 +54,4 @@ const [loading,setLoading]=useState(false)
   )
 }
 
-export default Signup
+export default {Signup}

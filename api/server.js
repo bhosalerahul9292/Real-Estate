@@ -1,8 +1,15 @@
-const express = require('express')
-const mongoose= require('mongoose')
-const dotenv =require('dotenv')
-const userRouter =require('./routes/user.routes')
-const authRouter = require('./routes/auth.routes')
+// When you in package.json "type":"commonjs"
+// const express = require('express')
+// const mongoose= require('mongoose')
+// const dotenv =require('dotenv')
+// const userRouter =require('./routes/user.routes')
+// const authRouter = require('./routes/auth.routes')
+
+import express from 'express'
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+import userRouter from './routes/user.routes.js'
+import authRouter from './routes/auth.routes.js'
 
 dotenv.config();
 
