@@ -3,6 +3,7 @@
 
 import User from '../models/user_model.js'
 import bycryptjs from 'bcryptjs'
+import errorHandler from '../utils/error.js'
 
 const signup = async (req,resp,next) => {
   const { username, email, password } = req.body;
@@ -16,6 +17,9 @@ const signup = async (req,resp,next) => {
     // resp.status(500).json(err.message)
     // delegate the error using middleware which present in server.js
     next(err)
+
+    // custom error function
+    // next(errorHandler(550,'Error from the functions'))
   }
 };
 

@@ -59,3 +59,20 @@ To use the icon in component install below package.
 npm install react-icons
 or 
 yarn add react-icons
+
+
+<!-- create the signup page -->
+
+Q.Why we are  defining the proxy inside  the vite.config.js
+- It Helps avoid CORS during development.
+- When you call /api/users in React:
+- Vite dev server forwards it to http://localhost:3000/api/users.
+
+- No need to write the full backend URL in your frontend code.
+
+Q2. Where to configure the proxy ?
+- it depends on the creating the application
+ CRA → proxy in package.json
+ Vite → proxy in vite.config.js
+
+- Once you signup and after that you want to navigate to login page then you can use useNavigate() Hooks for navigation.

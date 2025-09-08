@@ -31,4 +31,7 @@ https://www.youtube.com/watch?v=VAaUy_Moivw
 - Create the Signup api routes.
 - Create the routes in the routes in the routes folder.
 - Inside the routes import the controller file.
-- 
+
+
+- create the middle ware to handle the possible errors
+- create the custom error function.
