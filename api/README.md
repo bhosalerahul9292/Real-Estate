@@ -35,3 +35,18 @@ https://www.youtube.com/watch?v=VAaUy_Moivw
 
 - create the middle ware to handle the possible errors
 - create the custom error function.
+
+
+- create the routes for Signin
+1.in auth.contorller.js create the Signin functionality
+2.When the authinticate user and password then we can do the authintication by adding cookies inside the browser.
+So for authonitication we are using JWT to use that we have installed the JWT token.
+npm install jsonwebtoken
+
+And to create the jwt token import the jsonwebtoken at the top and for creation of token you can use sign()
+
+import jwt from 'jsonwebtoken'
+.
+.
+.
+const token = jwt.sign({ id: vaildUser._id }, process.env.JWT_SECRET);   // cerate the JWT token for each user by using id 
