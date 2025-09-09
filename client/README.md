@@ -76,3 +76,6 @@ Q2. Where to configure the proxy ?
  Vite → proxy in vite.config.js
 
 - Once you signup and after that you want to navigate to login page then you can use useNavigate() Hooks for navigation.
+
+- create the Signin functionality .
+
