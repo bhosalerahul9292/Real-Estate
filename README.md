@@ -124,3 +124,18 @@ server:{
   },
   plugins: []
 
+Q.How to persist the user data in local storage in react ?
+
+- Add Redux persist which helps us to store the user data inside the local storage.
+- So you need to add redux persist package using yarn.
+$ yarn add redux-persist
+or 
+$npm install redux-persist
+
+- Steps :
+1.Install the redux-persist package to store the data in local storage.
+2.In store combine all the reducer using combineReducer()
+3.To store the redux state in the local storage we need use persistReducer()whih will take two parameters config and combinedReducer.
+4.Add that persistReducer in store.
+5.Once add the persistReducer export the persistStore which will make the store persist and pass the store from it.
+6.To use the persistStore wrap the app component inside the PersistGate component.
