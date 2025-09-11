@@ -3,6 +3,12 @@ Q1.What is the use of Link component in react ?
 Can pass objects from it.
 
 
-what is event handling and event binding in react?
-what is the use of e.preventdefault()?
+Q.what is event handling and event binding in react?
+Q.what is the use of e.preventdefault()?
 -> To refreshing the page we are using preventDefault()
+
+Q.Why we need the redux or redux-toolkit in react ?
+- We can access redux data in different places.
+
+Q.What is the use of export default ?
+-->When you export component as export default in this case when ever we are using this component we can modify its name.

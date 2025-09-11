@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  signinStart,
+  signinSuccess,
+  signinFailure,
+} from "../redux/user/userSlice";
 
 function Signin() {
   const [formData, setFormData] = useState({});
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const { error, loading } = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setFormData({
@@ -18,7 +24,7 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setLoading(true);
+      dispatch(signinStart());
       // configure the vite.config.js with proxy
       const result = await fetch("/api/auth/signin", {
         method: "POST",
@@ -31,16 +37,13 @@ function Signin() {
       console.log(data);
 
       if (data.success == false) {
-        setError(data.message);
-        setLoading(false);
+        dispatch(signinFailure(data.message));
         return;
       }
-      setLoading(false);
-      setError(null);
+      dispatch(signinSuccess(data));
       navigate("/");
     } catch (error) {
-      setLoading(false);
-      setError(error.message);
+      dispatch(signinFailure(error.message));
     }
     // console.log(data);
   };

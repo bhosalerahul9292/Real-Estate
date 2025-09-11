@@ -79,3 +79,25 @@ Q2. Where to configure the proxy ?
 
 - create the Signin functionality .
 
+### Add redux toolkit:
+- create a folder in src named as redux inside that create the store.js
+- added the serializable check to store.js which prevent the error in the browser.
+ reducer:{},
+    middleware:(getDefaultMiddleware)=>{
+        getDefaultMiddleware({
+            serializableCheck:false,
+        })
+    }
+- provide the store to react in main.jsx
+- create the react redux slice.
+  - Inside the slice create the initialState
+  - create the slice using createSlice method
+    - inside this createSlice there are three main part 
+    1.name to the slice
+    2.use the initialState
+    3.create the reducer to perform the action using functions.
+- After creating the reducer inside the slice you need to export all reducer as export const as actions.
+- export the reducer as default.
+- Note first import the actions and then import the reducer as default.
+- after creating the store we need to add into our store.so we need to import that reducer inside the store.
+- after importing inside the use redux state and actions in react component using useDispatch() from the react-redux.
