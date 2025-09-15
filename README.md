@@ -152,3 +152,5 @@ $npm install redux-persist
 npm install firebase
 - Add the SDK in your project.
 - mistake declear the .env the root of client folder.
+
+### Update the header and make profile page private.

@@ -55,3 +55,10 @@ const token = jwt.sign({ id: vaildUser._id }, process.env.JWT_SECRET);   // cera
 # create the routes for google
 1.in route folder cerate the route.
 2.in controller folder create a function named as google
+3.fetch the user from the database.
+4. check if user is already exist.create the token for it and save the data in cookies.
+5.
+5.1.If not create the new user.
+5.2.Genrate the password ,username and set the default photo
+5.3.save that new user in the database.
+5.4.Create the new token save that token into the cookies.

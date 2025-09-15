@@ -61,11 +61,11 @@ export const signin = async (req, res, next) => {
 
 export const google = async(request, response, next) => {
   try {
-    // Logic for if user already exists
-    const user = await User.findOne({ email: request.body.email });
-    console.log('your here');
     
+    const user = await User.findOne({ email: request.body.email });
+        
     if (user) {
+      // Logic for if user already exists
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
       const { password, ...rest } = user._doc;
       response

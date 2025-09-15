@@ -16,3 +16,5 @@ Q.What is the use of export default ?
 Q.Once user login in to the he dont want to loose the data ?
 -->so for that data has been stored in local-storage.
 to add this we need to redux persist package.
+
+Q.What is the use of findOne method in javascript.
