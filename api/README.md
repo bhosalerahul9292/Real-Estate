@@ -50,3 +50,8 @@ import jwt from 'jsonwebtoken'
 .
 .
 const token = jwt.sign({ id: vaildUser._id }, process.env.JWT_SECRET);   // cerate the JWT token for each user by using id 
+
+
+# create the routes for google
+1.in route folder cerate the route.
+2.in controller folder create a function named as google

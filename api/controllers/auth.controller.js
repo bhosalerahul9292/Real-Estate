@@ -27,7 +27,7 @@ export const signup = async (req, resp, next) => {
 // module.exports = { signup };
 
 export const signin = async (req, res, next) => {
-  const {email, password} = req.body;
+  const { email, password } = req.body;
   try {
     // To check the validity of mail
     const vaildUser = await User.findOne({ email });
@@ -44,16 +44,56 @@ export const signin = async (req, res, next) => {
     // create the token which will check from the mongoDB and we need to use secret key for our application
     const token = jwt.sign({ id: vaildUser._id }, process.env.JWT_SECRET);
     // To exclude the password by sending user
-  const {password:pass,...rest}=vaildUser._doc;
+    const { password: pass, ...rest } = vaildUser._doc;
 
     // Store the token in the browser cookies.
-    res.cookie("access_token", token, {
+    res
+      .cookie("access_token", token, {
         httpOnly: true,
         expires: new Date(Date.now() + 60 * 60),
       })
       .status(200)
       .json(rest);
+  } catch (error) {
+    next(error);
+  }
+};
 
+export const google = async(request, response, next) => {
+  try {
+    // Logic for if user already exists
+    const user = await User.findOne({ email: request.body.email });
+    console.log('your here');
+    
+    if (user) {
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+      const { password, ...rest } = user._doc;
+      response
+        .cookie("access_token", token, { httpOnly: true })
+        .status(200)
+        .json(rest);
+    } else {
+      // Logic to create the if the the user is not exist create the user.3h15m
+      const genratedPassword =
+        Math.random().toString(36).slice(-8) +
+        Math.random().toString(36).slice(-8);
+      const hashedPassword = bycryptjs.hashSync(genratedPassword, 10);
+      const newUser = new User({
+        username:
+          request.body.name.split(" ").join("").toLowerCase() +
+          Math.random().toString(36).slice(-8),
+        email: request.body.email,
+        password: hashedPassword,
+        avatar:request.body.photo,
+      });
+      await newUser.save()
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+      const { password, ...rest } = user._doc;
+       response
+        .cookie("access_token", token, { httpOnly: true })
+        .status(200)
+        .json(rest);
+    }
   } catch (error) {
     next(error);
   }

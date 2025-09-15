@@ -139,3 +139,16 @@ $npm install redux-persist
 4.Add that persistReducer in store.
 5.Once add the persistReducer export the persistStore which will make the store persist and pass the store from it.
 6.To use the persistStore wrap the app component inside the PersistGate component.
+
+## Add the Google oauth functionality
+- create the one component in Oauth.jsx.
+
+
+### How to create the FireBase authenitication.
+- On google search firebase google.
+- Create and account and go to console
+- Create the project and register your app
+- After  that install 
+npm install firebase
+- Add the SDK in your project.
+- mistake declear the .env the root of client folder.
