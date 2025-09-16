@@ -154,3 +154,8 @@ npm install firebase
 - mistake declear the .env the root of client folder.
 
 ### Update the header and make profile page private.
+- Create the PrivateRoute component for private route.
+- using useSelector create fetch state value of user and based on that render the UI using conditional rendering.
+
+
+### Create the UI Profile page
